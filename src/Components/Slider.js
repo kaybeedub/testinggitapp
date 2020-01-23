@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Slider() {
+function Slider(props) {
   return (
     <div className="Slider">
-      <input type="range" max="255" />
+      <input onChange={props.updateColor} type="range" max="255" />
+      <p>{props.color}</p>
     </div>
   );
 }
